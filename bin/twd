@@ -3,7 +3,7 @@
 TEMP_DIR=$(mktemp -d)
 for CONTENT in "$@"
 do
-	[ -e ${CONTENT} ] && cp -rf ${CONTENT} ${TEMP_DIR}/
+	[ -e "${CONTENT}" ] && cp -rf "${CONTENT}" "${TEMP_DIR}/"
 done
-cd $TEMP_DIR && bash
-rm -rf $TEMP_DIR
+cd "$TEMP_DIR" && bash
+rm -rf "$TEMP_DIR"
