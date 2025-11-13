@@ -34,8 +34,8 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(auto-save-file-name-transforms '((".*" "~/.emacs.d/autosaves/" t)))
- '(backup-directory-alist '((".*" . "~/.emacs.d/backups/")))
- '(package-selected-packages '(counsel doom-modeline ivy ivy-rich)))
+ '(backup-directory-alist '((".*" . "~/.emacs.d/backups/"))))
+
 
 ;; create the autosave and backups dir if necessary, since emacs won't.
 (make-directory "~/.emacs.d/autosaves/" t)
