@@ -22,7 +22,7 @@
 (dolist (mode '(eshell-mode-hook
 		 term-mode-hook
 		 shell-mode-hook))
-	(add-hook mode (lambda () (display-line-numbers mode 0))))
+	(add-hook mode (lambda () (display-line-numbers-mode 0))))
 
 
 ;;;;;
