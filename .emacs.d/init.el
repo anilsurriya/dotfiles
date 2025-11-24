@@ -1,16 +1,26 @@
 ;; disable startup screen
 (setq inhibit-startup-message t)
+(setq default-directory "~/")
 
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
 (tooltip-mode -1)
 (set-fringe-mode 10)
 
+(windmove-default-keybindings)
+
+(defvaralias 'c-basic-offset 'tab-width)
+;; Set the desired tab width
+(setq tab-width 8)
+;; Use tabs for indentation by default
+(setq indent-tabs-mode t)
+
+
 ;; disable top menu bar
 (menu-bar-mode -1)
 
 ;; Setup visible bell
-(setq visible-bell t)
+(setq visible-bell nil)
 
 (load-theme 'tango-dark)
 
