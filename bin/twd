@@ -5,5 +5,5 @@ for CONTENT in "$@"
 do
 	[ -e "${CONTENT}" ] && cp -rf "${CONTENT}" "${TEMP_DIR}/"
 done
-cd "$TEMP_DIR" && bash
+cd "$TEMP_DIR" && ${SHELL}
 rm -rf "$TEMP_DIR"
