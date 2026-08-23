@@ -14,3 +14,7 @@ pathmunge () {
               fi
       esac
 }
+
+update-display() {
+    command -v tmux &>/dev/null && eval "$(tmux showenv -s DISPLAY)"
+}
