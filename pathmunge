@@ -1,0 +1,16 @@
+# Path adder function
+pathmunge () {
+      # If the path is a compat symlink, do nothing.
+      [ -h "$1" ] && return
+
+      case ":${PATH}:" in
+          *:"$1":*)
+              ;;
+          *)
+              if [ "$2" = "after" ] ; then
+                  PATH=$PATH:$1
+              else
+                  PATH=$1:$PATH
+              fi
+      esac
+}
