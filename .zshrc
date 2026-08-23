@@ -137,6 +137,7 @@ alias -g sl="lsd"
 alias -g ns="nix-shell"
 alias -g wcl="wc -l"
 alias -g dfi="df -h --output=target,source,fstype,size,used,avail,pcent,itotal,iused,iavail,ipcent"
+alias -g clip="xclip -selection clipboard"
 
 command -v fzf &>/dev/null && eval "$(fzf --zsh)"
 pathmunge ${HOME}/go/bin after
