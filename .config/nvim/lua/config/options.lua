@@ -16,6 +16,7 @@ vim.opt.relativenumber = true
 
 -- Show line under cursor
 vim.opt.cursorline = true
+vim.opt.cursorcolumn = true
 
 -- Store undos between sessions
 vim.opt.undofile = true
@@ -45,3 +46,12 @@ vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 5
+
+-- Clipboard
+vim.opt.clipboard = "unnamedplus"
+
+-- Wrap
+vim.opt.wrap = false
+
+-- Remove splash
+vim.opt.shortmess:append("I")
