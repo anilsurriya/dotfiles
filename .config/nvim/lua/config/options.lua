@@ -55,3 +55,6 @@ vim.opt.wrap = false
 
 -- Remove splash
 vim.opt.shortmess:append("I")
+
+-- Remove cmdline
+vim.o.cmdheight = 0

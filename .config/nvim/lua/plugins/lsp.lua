@@ -92,6 +92,14 @@ return {
 				--  For example, in C this would take you to the header.
 				map("gD", vim.lsp.buf.declaration, "[G]oto [D]eclaration")
 
+				-- Execute organize imports action
+				map("<leader>gi", function()
+					vim.lsp.buf.code_action({
+						context = { only = { "source.organizeImports" } },
+						apply = true,
+					})
+				end, "Organize [G]lobal [I]mports", { "n" })
+
 				-- This function resolves a difference between neovim nightly (version 0.11) and stable (version 0.10)
 				---@param client vim.lsp.Client
 				---@param method vim.lsp.protocol.Method
@@ -207,7 +215,17 @@ return {
 			marksman = {},
 			-- clangd = {},
 			gopls = {},
-			-- pyright = {},
+			pyright = {
+				settings = {
+					python = {
+						analysis = {
+							autoSearchPaths = true,
+							useLibraryCodeForTypes = true,
+							diagnosticMode = "workspace",
+						},
+					},
+				},
+			},
 			-- rust_analyzer = {},
 			-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
 			--
