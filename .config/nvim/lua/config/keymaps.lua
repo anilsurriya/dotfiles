@@ -16,8 +16,8 @@ vim.keymap.set("n", "<leader>fp", ":ProjectFzf<CR>", { noremap = true, silent = 
 vim.keymap.set("n", "<leader>tn", ":tabnew<CR>", { desc = "New tab" })
 
 -- Navigate tabs quickly
-vim.keymap.set("n", "<A-.>", ":tabnext<CR>", { desc = "Next tab" })
-vim.keymap.set("n", "<A-,>", ":tabprevious<CR>", { desc = "Previous tab" })
+vim.keymap.set("n", "<leader>t>", ":tabnext<CR>", { desc = "Next tab" })
+vim.keymap.set("n", "<leader>t<", ":tabprevious<CR>", { desc = "Previous tab" })
 
 -- Close tab
 vim.keymap.set("n", "<leader>tc", ":tabclose<CR>", { desc = "Close tab" })
