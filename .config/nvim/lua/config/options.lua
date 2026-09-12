@@ -58,3 +58,6 @@ vim.opt.shortmess:append("I")
 
 -- Remove cmdline
 vim.o.cmdheight = 0
+
+-- Add this to ~/.config/nvim/lua/config/options.lua
+vim.lsp.handlers["$/progress"] = function() end
