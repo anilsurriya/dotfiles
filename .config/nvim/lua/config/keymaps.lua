@@ -25,3 +25,14 @@ vim.keymap.set("n", "<leader>tc", ":tabclose<CR>", { desc = "Close tab" })
 -- Exit terminal mode with ESC
 vim.keymap.set("t", "<Esc><Esc>", [[<C-\><C-n>]], { desc = "Exit terminal mode" })
 vim.keymap.set("t", "<leader><Esc>", [[<C-\><C-n>]], { desc = "Exit terminal mode" })
+
+-- Toggle status line between global (3) and hidden (0)
+vim.keymap.set("n", "<leader>ts", function()
+	if vim.opt.laststatus:get() == 0 then
+		vim.opt.laststatus = 3 -- Use 2 if you prefer standard split status lines
+		print("Statusline: Shown")
+	else
+		vim.opt.laststatus = 0
+		print("Statusline: Hidden")
+	end
+end, { desc = "Toggle Statusline" })
