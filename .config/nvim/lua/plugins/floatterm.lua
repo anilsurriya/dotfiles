@@ -1,14 +1,16 @@
 return {
 	"nvzone/floaterm",
 	dependencies = "nvzone/volt",
-	enabled = false,
 	opts = {},
 	cmd = "FloatermToggle",
 	keys = {
 		{
-			"<leader>`",
+			"<A-i>",
 			"<cmd>FloatermToggle<cr>",
 			desc = "Toggle floating terminal",
 		},
 	},
+	config = function()
+		vim.keymap.set("t", "<A-i>", "<CMD>FloatermToggle<CR>", { desc = "Toggle floating terminal" })
+	end,
 }
