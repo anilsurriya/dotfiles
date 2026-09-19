@@ -64,3 +64,6 @@ vim.lsp.handlers["$/progress"] = function() end
 
 -- No wrap scan
 vim.opt.wrapscan = false
+
+-- Set Neovim's shell to your current login shell
+vim.o.shell = os.getenv("SHELL") or "/bin/sh"
