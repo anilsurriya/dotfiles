@@ -36,3 +36,6 @@ vim.keymap.set("n", "<leader>ts", function()
 		print("Statusline: Hidden")
 	end
 end, { desc = "Toggle Statusline" })
+
+-- Clear highlights
+vim.keymap.set("n", "<leader>l", ":noh<CR>", { noremap = true, silent = true, desc = "Clear highlights" })
