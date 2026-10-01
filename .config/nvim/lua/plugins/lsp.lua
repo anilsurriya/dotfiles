@@ -100,6 +100,8 @@ return {
 					})
 				end, "Organize [G]lobal [I]mports", { "n" })
 
+				map("<leader>rs", ":lsp restart<CR>", "Restart LSP")
+
 				-- This function resolves a difference between neovim nightly (version 0.11) and stable (version 0.10)
 				---@param client vim.lsp.Client
 				---@param method vim.lsp.protocol.Method
@@ -213,7 +215,7 @@ return {
 		local servers = {
 			bashls = {},
 			marksman = {},
-			-- clangd = {},
+			clangd = {},
 			gopls = {},
 			pyright = {
 				settings = {
